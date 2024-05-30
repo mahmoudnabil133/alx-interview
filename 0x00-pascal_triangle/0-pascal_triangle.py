@@ -1,8 +1,9 @@
-
 #!/usr/bin/python3
 """
-0-pascal function that return 2d arr with each row of triangle
+0-pascal function
 """
+
+
 def pascal_triangle(n):
     prev = []
     cur = [1]
