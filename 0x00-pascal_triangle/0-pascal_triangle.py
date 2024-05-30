@@ -5,6 +5,7 @@
 
 
 def pascal_triangle(n):
+    "main function that retrun res --> [[]]"
     prev = []
     cur = [1]
     res = []
