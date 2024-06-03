@@ -5,6 +5,7 @@
 def canUnlockAll(boxes):
     "check looked or unlocked"
     visited = set()
+
     def dfs(rooms, i):
         "recursion to each room"
         visited.add(i)
