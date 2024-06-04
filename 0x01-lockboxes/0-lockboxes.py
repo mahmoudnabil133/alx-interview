@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 "game to itrerate rooms with keys"
 
+
 def canUnlockAll(boxes):
     "check looked or unlocked"
     visited = set()
