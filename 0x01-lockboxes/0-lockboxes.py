@@ -4,6 +4,8 @@
 
 def canUnlockAll(boxes):
     "check looked or unlocked"
+    if len(boxes) == 1:
+        return True
     visited = set()
     dfs(boxes, 0, visited)
     for i in range(len(boxes)):
