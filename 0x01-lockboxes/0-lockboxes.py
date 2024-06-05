@@ -1,24 +1,25 @@
 #!/usr/bin/python3
-"game to itrerate rooms with keys"
+"""
+lockboxes problem
+"""
 
 
 def canUnlockAll(boxes):
-    "check looked or unlocked"
+    """
+    Determines whether a series of locked boxes can be opened
+    based on keys or not.
+    """
     if (type(boxes)) is not list:
         return False
     elif (len(boxes)) == 0:
         return False
-    visited = set()
-    dfs(boxes, 0, visited)
-    for i in range(len(boxes)):
-        if i not in visited:
-            return False
+
+    for k in range(1, len(boxes) - 1):
+        boxes_checked = False
+        for idx in range(len(boxes)):
+            boxes_checked = k in boxes[idx] and k != idx
+            if boxes_checked:
+                break
+        if boxes_checked is False:
+            return boxes_checked
     return True
-
-
-def dfs(rooms, i, visited):
-    "recursion to each room"
-    visited.add(i)
-    for k in rooms[i]:
-        if k not in visited:
-            dfs(rooms, k, visited)
