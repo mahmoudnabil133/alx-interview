@@ -4,8 +4,10 @@
 
 def canUnlockAll(boxes):
     "check looked or unlocked"
-    if len(boxes) == 1:
-        return True
+    if (type(boxes)) is not list:
+        return False
+    elif (len(boxes)) == 0:
+        return False
     visited = set()
     dfs(boxes, 0, visited)
     for i in range(len(boxes)):
