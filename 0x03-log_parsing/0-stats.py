@@ -5,7 +5,7 @@ import sys
 
 def log_parse(file_size, status):
     "log parse"
-    print(f"File size: {file_size: d}")
+    print(f"File size: {file_size}")
     for k in sorted(status.keys()):
         print(f"{k}: {status[k]}")
 file_size = 0
