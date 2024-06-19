@@ -1,5 +1,11 @@
 #!/usr/bin/python3
-"log parse module"
+"""
+log_parser
+errors
+1) sort dictionary
+2) codes list wasnt added
+3) try except for each step
+"""
 import sys
 
 codes = ['200', '301', '400', '401', '403', '404', '405', '500']
