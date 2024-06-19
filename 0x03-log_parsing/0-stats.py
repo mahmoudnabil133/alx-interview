@@ -20,10 +20,10 @@ try:
         try:
             count += 1
             l = l.split(' ')
-            # try:
-            file_size += int(l[-1][:-1])
-            # except BaseException:
-                # pass
+            try:
+                file_size += int(l[-1][:-1])
+            except BaseException:
+                pass
             # try:
             status[l[-2]] = status.get(l[-2], 0) + 1
             # except BaseException:
