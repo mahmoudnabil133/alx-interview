@@ -22,5 +22,5 @@ for l in sys.stdin:
             log_parse(file_size, status)
             status = {}
     except Exception as e:
-        print('error')
+        log_parse(file_size, status)
         pass
