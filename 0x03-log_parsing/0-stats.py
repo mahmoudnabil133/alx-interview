@@ -24,10 +24,10 @@ try:
                 file_size += int(l[-1][:-1])
             except BaseException:
                 pass
-            # try:
-            status[l[-2]] = status.get(l[-2], 0) + 1
-            # except BaseException:
-            #     pass
+            try:
+                status[l[-2]] = status.get(l[-2], 0) + 1
+            except BaseException:
+                pass
             if count % 10 == 0:
                 log_parse(file_size, status)
         except BaseException:
