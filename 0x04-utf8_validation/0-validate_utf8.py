@@ -4,7 +4,11 @@ return True if valid otherwise false
 """
 
 def validUTF8(data):
-    "validate data"
+    """
+    check if data is
+    valid or not
+    """
+
     for n in data:
         if n < 0 and   n > 256:
             return False
