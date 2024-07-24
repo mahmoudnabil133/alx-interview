@@ -47,7 +47,7 @@ def validUTF8(data):
             if num_of_bytes == 1 or num_of_bytes > 4:
                 return False
         else:
-            "byte should be 10xxxxxx"
+            "all remaining bytes of character should be 10xxxxxx"
             if not (msb1 & byte and not msb2 & byte):
                 return False
         num_of_bytes -= 1
