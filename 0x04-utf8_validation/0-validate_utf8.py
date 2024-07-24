@@ -51,5 +51,5 @@ def validUTF8(data):
             if not (msb1 & byte and not msb2 & byte):
                 return False
         num_of_bytes -= 1
-    
+
     return num_of_bytes == 0
