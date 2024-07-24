@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 check utf-8 vallidation of data 
 return True if valid otherwise false
