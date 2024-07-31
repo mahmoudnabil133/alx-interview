@@ -2,7 +2,7 @@
 "nqueens problem"
 import sys
 
-if len(sys.argv) >2:
+if len(sys.argv) > 2 or len(sys.argv) == 1:
     print('Usage: nqueens N')
     sys.exit(1)
 
@@ -22,11 +22,13 @@ negDiag = set()
 res = []
 board = []
 
+
 def backtrack(r):
+    "backteck function"
     if r == n:
         res.append(board.copy())
         return
-    
+
     for c in range(n):
         if c in cols or r-c in negDiag or r+c in posDiag:
             continue
@@ -40,6 +42,8 @@ def backtrack(r):
         negDiag.remove(r-c)
         posDiag.remove(r+c)
         board.remove([r, c])
+
+
 backtrack(0)
 
 for result in res:
