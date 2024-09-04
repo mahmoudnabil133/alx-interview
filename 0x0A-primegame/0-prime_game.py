@@ -36,8 +36,9 @@ def isWinner(x, nums):
         role = 1
         while ls:
             prime = min(ls)
+            ls.discard(prime)
             "remove prime and all multiples of prime"
-            multiples = set(range(prime, n + 1, prime))
+            multiples = set(range(prime * 2, n + 1, prime))
             ls.difference_update(multiples)
             if not ls:
                 if role == 1:
