@@ -55,7 +55,7 @@ def isWinner(x, nums):
             start += 1
             if start not in ls:
                 start += 1
-            role *= -1
+            role = 3 - role
 
     if maria > ben:
         return "Maria"
