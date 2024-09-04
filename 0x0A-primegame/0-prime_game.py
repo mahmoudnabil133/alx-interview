@@ -32,23 +32,30 @@ def isWinner(x, nums):
         if n < 2:
             ben += 1
             continue
-        ls = set(range(2, n + 1))
+        ls = set()
+        for i in range(2, n + 1):
+            ls.add(i)
+
+        start = 2
         role = 1
-        while ls:
-            prime = min(ls)
-            ls.discard(prime)
-            "remove prime and all multiples of prime"
-            multiples = set(range(prime * 2, n + 1, prime))
-            ls.difference_update(multiples)
-            if not ls:
-                if role == 1:
+        while start <= n:
+            player = players[role]
+            pick = start
+            while len(ls) >= 1 and pick <= n and is_prime(start):
+                ls.remove(pick)
+                pick *= 2
+
+            if len(ls) == 0:
+                if player == 'Maria':
                     maria += 1
                 else:
                     ben += 1
                 break
 
-            role *= -1
-    print(maria, ben)
+            start += 1
+            if start not in ls:
+                start += 1
+            role = 3 - role
 
     if maria > ben:
         return "Maria"
